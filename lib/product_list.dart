@@ -1,0 +1,68 @@
+import 'product.dart';
+
+final List<Product> products = [
+  Product(
+    id: 1,
+    name: 'Product 1',
+    image: 'https://via.placeholder.com/150',
+    price: 100,
+    description: 'This is a long description for Product 1',
+    like: true,
+  ),
+  Product(
+    id: 2,
+    name: 'Product 2',
+    image: 'https://via.placeholder.com/150',
+    price: 200,
+    description: 'This is a long description for Product 2',
+    like: false,
+  ),
+  Product(
+    id: 3,
+    name: 'Product 3',
+    image: 'https://via.placeholder.com/150',
+    price: 300,
+    description: 'This is a long description for Product 3',
+    like: true,
+  ),
+  Product(
+    id: 4,
+    name: 'Product 4',
+    image: 'https://via.placeholder.com/150',
+    price: 400,
+    description: 'This is a long description for Product 4',
+    like: false,
+  ),
+  Product(
+    id: 5,
+    name: 'Product 5',
+    image: 'https://via.placeholder.com/150',
+    price: 500,
+    description: 'This is a long description for Product 5',
+    like: true,
+  ),
+  Product(
+    id: 6,
+    name: 'Product 6',
+    image: 'https://via.placeholder.com/150',
+    price: 600,
+    description: 'This is a long description for Product 6',
+    like: false,
+  ),
+  Product(
+    id: 7,
+    name: 'Product 7',
+    image: 'https://via.placeholder.com/150',
+    price: 700,
+    description: 'This is a long description for Product 7',
+    like: true,
+  ),
+  Product(
+    id: 8,
+    name: 'Product 8',
+    image: 'https://via.placeholder.com/150',
+    price: 800,
+    description: 'This is a long description for Product 8',
+    like: false,
+  ),
+];
