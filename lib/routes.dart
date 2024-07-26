@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+// routes.dart
 import 'package:go_router/go_router.dart';
 import 'home_screen.dart';
 import 'products_screen.dart';
@@ -17,7 +17,7 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/product/:id',
       builder: (context, state) {
-        final id = int.parse(state.pathParameters['id']!);
+        final id = state.pathParameters['id']!;
         return ProductItemScreen(productId: id);
       },
     ),

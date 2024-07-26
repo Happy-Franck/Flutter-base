@@ -2,7 +2,7 @@ import 'product.dart';
 
 final List<Product> products = [
   Product(
-    id: 1,
+    id: '1',
     name: 'Product 1',
     image: 'https://via.placeholder.com/150',
     price: 100,
@@ -10,7 +10,7 @@ final List<Product> products = [
     like: true,
   ),
   Product(
-    id: 2,
+    id: '2',
     name: 'Product 2',
     image: 'https://via.placeholder.com/150',
     price: 200,
@@ -18,7 +18,7 @@ final List<Product> products = [
     like: false,
   ),
   Product(
-    id: 3,
+    id: '3',
     name: 'Product 3',
     image: 'https://via.placeholder.com/150',
     price: 300,
@@ -26,7 +26,7 @@ final List<Product> products = [
     like: true,
   ),
   Product(
-    id: 4,
+    id: '4',
     name: 'Product 4',
     image: 'https://via.placeholder.com/150',
     price: 400,
@@ -34,7 +34,7 @@ final List<Product> products = [
     like: false,
   ),
   Product(
-    id: 5,
+    id: '5',
     name: 'Product 5',
     image: 'https://via.placeholder.com/150',
     price: 500,
@@ -42,7 +42,7 @@ final List<Product> products = [
     like: true,
   ),
   Product(
-    id: 6,
+    id: '6',
     name: 'Product 6',
     image: 'https://via.placeholder.com/150',
     price: 600,
@@ -50,7 +50,7 @@ final List<Product> products = [
     like: false,
   ),
   Product(
-    id: 7,
+    id: '7',
     name: 'Product 7',
     image: 'https://via.placeholder.com/150',
     price: 700,
@@ -58,7 +58,7 @@ final List<Product> products = [
     like: true,
   ),
   Product(
-    id: 8,
+    id: '8',
     name: 'Product 8',
     image: 'https://via.placeholder.com/150',
     price: 800,

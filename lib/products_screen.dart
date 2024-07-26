@@ -1,20 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'product.dart';
-import 'product_list.dart'; // Importer le fichier de la liste des produits
+import 'product_list.dart';
 
 class ProductsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Products Screen'),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            context.pop();
-          },
-        ),
+        title: Text('Products'),
       ),
       body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -30,30 +24,20 @@ class ProductsScreen extends StatelessWidget {
               context.go('/product/${product.id}');
             },
             child: Card(
-              elevation: 4.0,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.network(
-                    product.image,
-                    fit: BoxFit.cover,
-                    height: 100.0,
-                    width: double.infinity,
+                  Expanded(
+                    child: Image.network(product.image, fit: BoxFit.cover),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      product.name,
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                    ),
+                    child: Text(product.name,
+                        style: TextStyle(fontWeight: FontWeight.bold)),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    child: Text(
-                      '\$${product.price}',
-                      style: TextStyle(fontSize: 14, color: Colors.green),
-                    ),
+                    child: Text('\$${product.price}'),
                   ),
                 ],
               ),

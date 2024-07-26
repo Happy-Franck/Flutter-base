@@ -1,12 +1,14 @@
+// product_item_screen.dart
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:flutter/material.dart';
+import 'product_list.dart';
 import 'package:go_router/go_router.dart';
-import 'product.dart';
-import 'product_list.dart'; // Importer le fichier de la liste des produits
 
 class ProductItemScreen extends StatelessWidget {
-  final int productId;
+  final String productId;
 
-  ProductItemScreen({required this.productId});
+  const ProductItemScreen({required this.productId});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class ProductItemScreen extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            context.pop();
+            context.go('/products');
           },
         ),
       ),
@@ -27,34 +29,17 @@ class ProductItemScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.network(
-              product.image,
-              height: 200.0,
-              width: double.infinity,
-              fit: BoxFit.cover,
-            ),
-            SizedBox(height: 16),
+            Image.network(product.image),
+            SizedBox(height: 8.0),
             Text(
               product.name,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 8),
+            SizedBox(height: 8.0),
             Text(
               '\$${product.price}',
-              style: TextStyle(fontSize: 20, color: Colors.green),
             ),
-            SizedBox(height: 16),
-            Text(
-              product.description,
-              style: TextStyle(fontSize: 16),
-            ),
-            SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: () {
-                // Implémenter la logique de contact ou d'action ici
-              },
-              child: Text('Contact'),
-            ),
+            SizedBox(height: 16.0),
+            Text(product.description),
           ],
         ),
       ),

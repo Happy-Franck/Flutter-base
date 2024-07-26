@@ -29,5 +29,5 @@ linter:
 analyzer:
   errors:
     # Désactive l'avertissement pour l'utilisation de const où applicable
-    prefer_const_constructors: ignore
-    prefer_const_literals_to_create_immutables: ignore
+    prefer_const_constructors: false
+    prefer_const_literals_to_create_immutables: false
